@@ -513,6 +513,18 @@ export class BotUpdate {
                 `Davom eting, yangi darslar sizni kutmoqda! 🚀\n\n` +
                 `Siz bilan birga o'sish juda quvonchli! 🌟`,
             );
+
+
+            await this.userModel.update(
+              {
+                dateHour: null,
+                dateLastHour: null,
+                dateTwelve: null,
+                dateTwentyFour: null,
+              },
+              {where: {id: user.id}}
+            );
+            return;
           }
 
           const updatedLessons = {

@@ -26,11 +26,11 @@ interface UserAttributes {
   gender?: string;
   lessonOrder?: number;
   checkLessons?: LessonsStatus;
-  dateTwentyFour?: Date;
-  dateTwelve?: Date;
-  dateHour?: Date;
-  lastVideoId?: number;
-  dateLastHour?: Date;
+  dateTwentyFour?: Date | null;
+  dateTwelve?: Date | null;
+  dateHour?: Date | null;
+  lastVideoId?: number | null;
+  dateLastHour?: Date | null;
 }
 
 @Table({ tableName: 'users', timestamps: true })
